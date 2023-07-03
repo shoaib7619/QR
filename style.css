@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(47, 47, 233);
+}
+.container{
+    width: 100%;
+    max-width: 400px;  
+    background-color: aliceblue;
+    border-radius: 7px;
+    padding: 15px 25px;
+    overflow: hidden;
+}
+button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+nav button{
+    width: calc(100% /2 - 15px);
+    font-size: 1.2rem;
+    text-align: center;
+    height: 45px;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid rgb(150, 137, 174);
+}
+nav button.active{
+    border-bottom: 2px solid  rgb(67, 67, 189);
+    font-weight: 700;
+    color: rgb(67, 67, 189); 
+}
+
+/* generate */
+.generate{
+    overflow: hidden;
+    height: 230px;
+    transition: height 0.25s;
+}
+
+.generate.active{
+    height: 515px;
+}
+.generate h1{
+    font-size: 25px;
+}
+.generate p{
+    font-size: 16px;
+    color: rgb(97, 96, 96);
+    margin-top: 10px;
+}
+.generate-form{
+    margin: 20px 0;
+
+}
+.generate-form input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5%;
+    border: 1px solid gainsboro;
+    font-size: 18px;
+    padding: 0 15px;
+}
+.generate-form button{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(67, 67, 189);
+    margin-block: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+}
+.generate-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 33px;
+    border: 2px dashed rgb(202, 196, 196) ;
+    pointer-events: none;
+}
+.generate-btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.generate-btn .btn-link{
+    background: transparent;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 10px 10px 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.generate-btn .btn-link:hover{
+    padding: 10px;
+    background-color: hsl(240, 100%, 90%);
+}
+
+/* scanner */
+
+.scanner{
+    overflow: hidden;
+    height: 250px;
+    transition: height 0.2s;
+}
+.scanner h1{
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.scanner h1 i{
+    font-size: x-large;
+    margin-left: 5px;
+    cursor: pointer;    
+}
+.scanner h1 .fa-camera{
+    color: rgb(67, 67, 189);
+}
+.scanner h1 .fa-circle-stop{
+    color: red;
+    display: none; 
+}
+.scanner-form{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px dashed rgb(202, 196, 196);
+}
+.scanner-form img{
+   max-width: 180px; 
+   display: none;
+}
+.scanner-form video{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.scanner .content{
+    color: rgb(67, 67, 189);
+
+}
+.scanner-form .content i{
+font-size: 3rem;
+margin-top: 15px ;
+display: flex;
+justify-content: center;
+}
+.scanner-detail{
+    margin-top: 15px;
+}
+.scanner-detail textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    border-radius: 5px;
+}
+.scanner-detail .btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+ }
+ .scanner-detail .btn button{
+    height: 40px;
+    width: 40%;
+    background-color: rgb(67, 67, 189);
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  
+ }
+
+ .scanner.active{
+    height: 490px;
+ }
+.scanner.active .scanner-form{
+    pointer-events: none;
+}
+.scanner.active .scanner-form img{
+    display: block;
+}
+.scanner.active .scanner-form .content,
+.scanner.active .scanner-form img video{
+    display: none;
+}
+
+/* Active video */
+.scanner-form.active-video video{
+    display: block;
+}
+.scanner-form.active-video .content,
+.scanner-form.active-video img{
+    display: none;
+}
